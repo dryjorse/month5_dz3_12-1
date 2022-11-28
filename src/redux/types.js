@@ -1,0 +1,5 @@
+export const types = {
+    GET_NUMBER: "GET_NUMBER",
+    GET_SUMM_OF_NUMBER: "GET_SUMM_OF_NUMBER",
+    GET_RESULTS_LIST: "GET_RESULTS_LIST"
+}
