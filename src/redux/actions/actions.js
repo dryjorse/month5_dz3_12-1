@@ -13,3 +13,9 @@ export const getResultsListAction = (number) => {
         payload: number
     }
 }
+
+export const clearListAction = () => {
+    return {
+        type: types.CLEAR_LIST
+    }
+}

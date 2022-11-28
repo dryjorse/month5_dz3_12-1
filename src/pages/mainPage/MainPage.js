@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import NumbersList from '../../components/numbersList/NumbersList';
-import { addSummAction, getNumberAction, getResultsListAction } from '../../redux/actions/actions';
+import { clearListAction, getNumberAction, getResultsListAction } from '../../redux/actions/actions';
 
 function MainPage() {
   const dispatch = useDispatch()
@@ -16,11 +16,16 @@ function MainPage() {
     dispatch(getResultsListAction(number))
   }
 
+  const clearList = () => {
+    dispatch(clearListAction())
+  }
+
   return (
     <div>
         <h1>title</h1>
         <input type="number" onChange={onChangeText} value={number}/>
         <button onClick={addSummOfNumbers}>add</button>
+        <button onClick={clearList}>clear</button>
         <NumbersList numbers={results} />
     </div>
   )

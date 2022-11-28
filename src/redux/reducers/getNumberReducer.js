@@ -15,6 +15,8 @@ export const getNumberReducer = (state = initialState, action) => {
                 state.results.length ? +state.results.slice(-1) + +action.payload
                 : +action.payload
             ]}
+        case types.CLEAR_LIST:
+            return {...state, results: []}
         default:
             return state
     }
